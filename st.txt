@@ -1,0 +1,19 @@
+#!/data/data/com.termux/files/usr/bin/bash
+# Auto setup Python cho Termux
+
+echo "🔄 Bắt đầu setup Python cho Termux..."
+yes | pkg update && yes | pkg upgrade
+
+# Cài Python + pip
+yes | pkg install python python-pip git curl wget nano vim
+
+# Nâng pip lên bản mới nhất
+pip install --upgrade pip
+
+# Cài sẵn các thư viện Python hay dùng
+pip install requests bs4 colorama pystyle selenium pycurl beautifulsoup4 \
+inquirer pillow console mechanize zlapi cryptography lxml rich tqdm
+
+clear
+echo "✅ Setup Python trong Termux hoàn tất!"
+echo "👉 Bạn có thể clone GitHub và chạy file .py ngay."
